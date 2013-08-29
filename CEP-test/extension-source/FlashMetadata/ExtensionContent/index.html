@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+    <title>Flash Metadata</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="css/topcoat/css/topcoat-desktop-dark.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="lib/angular.js"></script>
+ 	<script src="lib/CSInterface-4.0.0.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body onLoad="onBodyLoaded()" ng-controller="mainCtrl">
+	
+    <h4>My custom CEDEC game metadata:</h4>
+   
+    <div class="topcoat-list__container">
+	    <ul class="topcoat-list">
+	    
+	    	<li class="topcoat-list__item">
+	    		<label class="topcoat-checkbox__label">
+	    			<div class="list-label">Dynamic:</div>
+	    			<div class="checkbox-holder">
+						<input class="my-checkbox" type="checkbox" ng-model="dynamic" ng-change="update()">
+						<div class="topcoat-checkbox"></div>
+					</div>
+				</label>
+			</li>
+
+	    	<li class="topcoat-list__item">
+	    		<label class="topcoat-checkbox__label">
+	    			<div class="list-label">Is hero:</div>
+	    			<div class="checkbox-holder">
+						<input class="my-checkbox" type="checkbox" ng-model="hero" ng-change="update()">
+						<div class="topcoat-checkbox"></div>
+					</div>
+				</label>
+			</li>
+	    	
+	    	<li class="topcoat-list__item">
+	    		<label class="list-label">Density:</label> 
+	    		<input type="text" placeholder="" class="topcoat-text-input" ng-model="density" ng-change="update()">
+	    	</li>
+	    	<li class="topcoat-list__item">
+	    		<div class="list-label">Friction:</div> 
+	    		<input type="text" placeholder="" class="topcoat-text-input" ng-model="friction" ng-change="update()">
+	    	</li>
+	    	<li class="topcoat-list__item" ng-show="hero">
+	    		<div class="list-label">Jump height:</div> 
+	    		<input type="text" placeholder="" class="topcoat-text-input" ng-model="jump" ng-change="update()">
+	    	</li>
+	    </ul>
+    </div>
+    
+    <script src="js/jsfl.js"></script>
+    
+</body>
+</html>
