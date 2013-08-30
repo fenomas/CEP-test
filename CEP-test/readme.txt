@@ -15,7 +15,7 @@
 3. After editing the custom extension, test or debug it by selecting 
    Run > Run or Run > Debug.  This will install the custom panel to 
    Flash Pro (version Avatar or later).
-4. Open runner.fla
+4. Open level.fla
 5. Open the custom panel by selecting Window > Extension > FlashMetadata
 6. Select the movieclips on the stage and view or change their physical properties.
 7. Open exporter.jsfl in Flash (for editing)
